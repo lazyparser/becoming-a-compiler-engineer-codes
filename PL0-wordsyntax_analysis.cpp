@@ -1051,10 +1051,8 @@ void printCodeAndTable()
 int main()
 {
 	printf("please input source program file name:");
-	char fileName[256];
-	scanf("%s", fileName);
 
-	if ((fin = fopen(fileName, "r")) == NULL)
+	if ((fin = fopen("test.txt", "r")) == NULL)
 	{
 		printf("cannot open the file %s!", fileName);
 		exit(1);
