@@ -1051,44 +1051,41 @@ void printCodeAndTable()
 int main()
 {
 	printf("please input source program file name:");
-	char fileName[256];
-	scanf("%s", fileName);
-
-	if ((fin = fopen(fileName, "r")) == NULL)
+	if ((fin = fopen("test,txt", "r")) == NULL)
 	{
-		printf("cannot open the file %s!", fileName);
+		printf("Cannot open the file!");
 		exit(1);
 	}
 	fseek(fin, 0, SEEK_END);
 	eof = ftell(fin);
 	fseek(fin, 0, SEEK_SET);
-	strcpy(error_msg[0], "Ó¦ÊÇ=¶ø²»ÊÇ:=");
-	strcpy(error_msg[1], "=ºóÓ¦ÎªÊı");
-	strcpy(error_msg[2], "±êÊ¶·ûºóÓ¦Îª=");
-	strcpy(error_msg[3], "const,var,procedureºóÓ¦Îª±êÊ¶·û");
-	strcpy(error_msg[4], "Â©µô¶ººÅ»ò·ÖºÅ");
-	strcpy(error_msg[5], "¹ı³ÌËµÃ÷ºóµÄ·ûºÅ²»ÕıÈ·");
-	strcpy(error_msg[6], "Ó¦ÎªÓï¾ä");
-	strcpy(error_msg[7], "³ÌĞòÌåÄÚÓï¾ä²¿·ÖºóµÄ·ûºÅ²»ÕıÈ·");
-	strcpy(error_msg[8], "Ó¦Îª¾äºÅ");
-	strcpy(error_msg[9], "Óï¾äÖ®¼äÂ©·ÖºÅ");
-	strcpy(error_msg[10], "±êÊ¶·ûÎ´ËµÃ÷");
-	strcpy(error_msg[11], "²»¿ÉÏò³£Á¿»òÕß¹ı³Ì¸³Öµ");
-	strcpy(error_msg[12], "Ó¦Îª¸³ÖµÔËËã·û:=");
-	strcpy(error_msg[13], "callºóÓ¦Îª±êÊ¶·û");
-	strcpy(error_msg[14], "²»¿Éµ÷ÓÃ³£Á¿»ò±äÁ¿");
-	strcpy(error_msg[15], "Ó¦Îªthen");
-	strcpy(error_msg[16], "Ó¦Îª·ÖºÅ»òend");
-	strcpy(error_msg[17], "Ó¦Îªdo");
-	strcpy(error_msg[18], "Óï¾äºóµÄ·ûºÅ²»ÕıÈ·");
-	strcpy(error_msg[19], "Ó¦Îª¹ØÏµÔËËã·û");
-	strcpy(error_msg[20], "±í´ïÊ½ÄÚ²»¿ÉÓĞ¹ı³Ì±êÊ¶·û");
-	strcpy(error_msg[21], "Â©ÓÒÀ¨ºÅ");
-	strcpy(error_msg[22], "Òò×Óºó²»¿ÉÎª´Ë·ûºÅ");
-	strcpy(error_msg[23], "±í´ïÊ½²»ÄÜÒÔ´Ë·ûºÅ¿ªÍ·");
-	strcpy(error_msg[29], "Õâ¸öÊıÌ«´ó");
-	strcpy(error_msg[31], "untilÎ´ÕÒµ½");
-	strcpy(error_msg[39], "Ó¦Îª×óÀ¨ºÅ");
+	strcpy(error_msg[0], "åº”æ˜¯=è€Œä¸æ˜¯:=");
+	strcpy(error_msg[1], "=ååº”ä¸ºæ•°");
+	strcpy(error_msg[2], "æ ‡è¯†ç¬¦ååº”ä¸º=");
+	strcpy(error_msg[3], "const,var,procedureååº”ä¸ºæ ‡è¯†ç¬¦");
+	strcpy(error_msg[4], "æ¼æ‰é€—å·æˆ–åˆ†å·");
+	strcpy(error_msg[5], "è¿‡ç¨‹è¯´æ˜åçš„ç¬¦å·ä¸æ­£ç¡®");
+	strcpy(error_msg[6], "åº”ä¸ºè¯­å¥");
+	strcpy(error_msg[7], "ç¨‹åºä½“å†…è¯­å¥éƒ¨åˆ†åçš„ç¬¦å·ä¸æ­£ç¡®");
+	strcpy(error_msg[8], "åº”ä¸ºå¥å·");
+	strcpy(error_msg[9], "è¯­å¥ä¹‹é—´æ¼åˆ†å·");
+	strcpy(error_msg[10], "æ ‡è¯†ç¬¦æœªè¯´æ˜");
+	strcpy(error_msg[11], "ä¸å¯å‘å¸¸é‡æˆ–è€…è¿‡ç¨‹èµ‹å€¼");
+	strcpy(error_msg[12], "åº”ä¸ºèµ‹å€¼è¿ç®—ç¬¦:=");
+	strcpy(error_msg[13], "callååº”ä¸ºæ ‡è¯†ç¬¦");
+	strcpy(error_msg[14], "ä¸å¯è°ƒç”¨å¸¸é‡æˆ–å˜é‡");
+	strcpy(error_msg[15], "åº”ä¸ºthen");
+	strcpy(error_msg[16], "åº”ä¸ºåˆ†å·æˆ–end");
+	strcpy(error_msg[17], "åº”ä¸ºdo");
+	strcpy(error_msg[18], "è¯­å¥åçš„ç¬¦å·ä¸æ­£ç¡®");
+	strcpy(error_msg[19], "åº”ä¸ºå…³ç³»è¿ç®—ç¬¦");
+	strcpy(error_msg[20], "è¡¨è¾¾å¼å†…ä¸å¯æœ‰è¿‡ç¨‹æ ‡è¯†ç¬¦");
+	strcpy(error_msg[21], "æ¼å³æ‹¬å·");
+	strcpy(error_msg[22], "å› å­åä¸å¯ä¸ºæ­¤ç¬¦å·");
+	strcpy(error_msg[23], "è¡¨è¾¾å¼ä¸èƒ½ä»¥æ­¤ç¬¦å·å¼€å¤´");
+	strcpy(error_msg[29], "è¿™ä¸ªæ•°å¤ªå¤§");
+	strcpy(error_msg[31], "untilæœªæ‰¾åˆ°");
+	strcpy(error_msg[39], "åº”ä¸ºå·¦æ‹¬å·");
 
 	for (int i = 0; i < 256; i++)
 	{
