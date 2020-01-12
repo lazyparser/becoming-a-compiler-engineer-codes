@@ -1,11 +1,11 @@
 default:build check
 build:
 	flex src/lexical.l
-	cc lex.yy.c -lfl
-	./a.out < test/testcase.pl0
+	gcc -o lexical lex.yy.c -lfl
 	bison -d src/parsing.y
 	flex src/parsing.l
-	gcc parsing.tab.c lex.yy.c -lfl
-	./a.out < test/testcase.pl0
+	gcc -o parsing parsing.tab.c lex.yy.c -lfl
 check:
+	./lexical < test/testcase.pl0
+	./parsing < test/testcase.pl0
 .PHONY:default build check
