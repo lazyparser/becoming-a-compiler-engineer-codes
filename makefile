@@ -1,11 +1,11 @@
 default:build check
 build:
 	flex src/graml.l
-	cc lex.yy.c -lfl
-	./a.out < test/test.pl0
+	gcc -o gram lex.yy.c -lfl
 	bison -d src/parser.y
 	flex src/scanner.l
-	gcc parser.tab.c lex.yy.c -lfl
-	./a.out < test/test.pl0
+	gcc -o scanner parser.tab.c lex.yy.c -lfl
 check:
+	./gram < test/test.pl0
+	./scanner < test/test.pl0
 .PHONY:default build check
