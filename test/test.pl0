@@ -1,0 +1,10 @@
+var n, f;
+begin
+     n := 0222222222222222222222;
+     f := 1;
+     while n # 10 do
+     begin
+          n := n + 1;
+          f := f * n;
+     end;
+end.
