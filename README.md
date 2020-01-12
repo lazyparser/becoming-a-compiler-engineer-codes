@@ -1,2 +1,2 @@
-# PL0
-This is a simple PL0 translator.
+# 方舟编译器培训配套代码
+直接clone到本地，在文件夹中打开终端，输入make可直接运行
