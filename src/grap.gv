@@ -1,0 +1,42 @@
+digraph ast{
+   node [shape = circle, fontsize = 10];
+   node [shape="plaintext"];  
+   TERM1 [label="TERM1,5+4*6-7"];
+   TERM2 [label="TERM,5+4*6"];
+   SUB [label="SUB(-)"];
+   FACTOR1 [label="FACTOR,7"];
+   CELL1 [label="CELL,7"]
+   NUMBER1 [label="NUMBER,7"];
+   TERM3 [label="TERM,5"];
+   ADD [label="ADD,+"];
+   FACTOR2 [label="FACTOR,4*6"];
+   FACTOR3 [label="FACTOR,4"];
+   MUL [label="MUL,*"];
+   CELL2 [label="CELL,6"];
+   NUMBER2 [label="NUMBER,6"];
+   CELL3 [label="CELL,4"];
+   NUMBER3 [label="NUMBER,4"];
+   FACTOR4 [label="FACTOR,5"];
+   CELL4 [label="CELL,5"];
+   NUMBER4 [label="NUMBER,5"];
+
+   
+   TERM1 -> TERM2;
+   TERM1 -> SUB;
+   TERM1 -> FACTOR1;
+   FACTOR1 -> CELL1;
+   CELL1 -> NUMBER1;
+   TERM2 -> TERM3;
+   TERM2 -> ADD;
+   TERM2 -> FACTOR2;
+   FACTOR2 -> FACTOR3;
+   FACTOR2 -> MUL; 
+   FACTOR2 -> CELL2;
+   CELL2 -> NUMBER2;
+   FACTOR3 -> CELL3;
+   CELL3 -> NUMBER3;
+   TERM3 -> FACTOR4;
+   FACTOR4 -> CELL4;
+   CELL4 -> NUMBER4;
+  }
+
