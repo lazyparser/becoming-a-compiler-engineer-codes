@@ -1,4 +1,4 @@
- default:build check
+default:build check
 build:
 	flex src/lexical.l
 	gcc -o lexical lex.yy.c -lfl
