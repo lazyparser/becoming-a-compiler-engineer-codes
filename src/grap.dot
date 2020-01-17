@@ -1,0 +1,41 @@
+digraph ast{
+   node [shape = circle, fontsize = 10];
+   node [shape="plaintext"];  
+   TEMP [label="T,9/3*7-5"];
+   TEMP1 [label="T,9/3*7"];
+   SUB [label="SUB(-)"];
+   F1 [label="F,5"];
+   B1 [label="B,5"]
+   NUMBER1 [label="NUMBER,5"];
+   TEMP2 [label="T,9/3"];
+   MUL [label="MUL(*)"];
+   F2 [label="F,7"];
+   B2 [label="B,7"];
+   NUMBER2 [label="NUMBER,7"];
+   F3 [label="F,9"];
+   B3 [label="B,9"];
+   DIV [label="DIV(/)"]
+   NUMBER3 [label="NUMBER,9"];
+   B4 [label="B,3"];
+   NUMBER4 [label="NUMBER,3"];
+   
+
+   
+   TEMP -> TEMP1;
+   TEMP -> SUB;
+   TEMP -> F1;
+   F1 -> B1;
+   B1 -> NUMBER1;
+   TEMP1 -> TEMP2;
+   TEMP1 -> MUL;
+   TEMP1 -> F2;
+   F2 -> B2;
+   B2 -> NUMBER2; 
+   TEMP2 -> F3;
+   TEMP2 -> DIV;
+   TEMP2 -> B4;
+   F3 -> B3;
+   B3 -> NUMBER3;
+   B4 -> NUMBER4;
+  }
+
