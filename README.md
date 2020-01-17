@@ -1,5 +1,5 @@
 # becoming-a-compiler-engineer-codes
-方舟编译入门技术课程配套代码
+方舟编译入门技术课程的配套代码
 
 ## 第一步：使用git clone命令将代码clone到本地
 ## 第二步：安装环境
