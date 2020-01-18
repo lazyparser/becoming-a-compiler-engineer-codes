@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#Flex output
+a.out
+lex.yy.c
+*.tab.c
+*tab.h
