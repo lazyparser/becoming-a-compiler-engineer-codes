@@ -31,8 +31,9 @@
 *.out
 *.app
 
-#Flex output
-a.out
+#Flex and bison output
 lex.yy.c
 *.tab.c
 *tab.h
+scanner
+gram

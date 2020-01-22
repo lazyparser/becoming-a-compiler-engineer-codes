@@ -1,19 +1,27 @@
 %{
+#include <stdio.h>
+#define YYSTYPE char *
 void yyerror(const char* msg) {}
 int yylex(void);
 %}
 
-%token ID INT PLUS ASSIGN
+%start P
+%token ID INT ASSIGN
 
 %%
 
-S : E 
+P: St P
+  |
+  ;
 
-E : ID ASSIGN INT
-   | ID ASSIGN ID PLUS INT   
+St: ID ASSIGN Exp   { printf("%s assign ", $1); $1=$3; printf("%s\n", $3); }
+   ;
+
+Exp:  INT { $$=$1; printf("num is %s\n", $1); } 
+      ;
+
 
 %%
-
 
 
 int main(){
