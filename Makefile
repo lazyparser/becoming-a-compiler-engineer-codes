@@ -5,8 +5,8 @@ build:
 	bison -d src/parsing.y
 	flex src/parsing.l
 	gcc -o parsing parsing.tab.c lex.yy.c -lfl
-	dot -Tpdf src/grap.gv -o test2.pdf
 check:
-	./lexical < test/testcase.pl0
-	./parsing < test/testcase.pl0
+	./lexical < test/test.pl0
+	./parsing < test/test1
+	dot -Tpdf graph.txt -o test1_pdf.pdf
 .PHONY:default build check
