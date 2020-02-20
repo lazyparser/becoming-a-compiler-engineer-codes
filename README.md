@@ -13,4 +13,4 @@ apt-get install graphviz
 ### 说明
 test.PL0是一个PL0语言的样例程序，由Flex和Bison分别生成的词法分析器和和语法分析器分析
 
-test1是用PL0语言写的表达式fj:=5-4+9*6
+test1是用PL0语言写的表达式fj:=5-4+9*6*1+1+1

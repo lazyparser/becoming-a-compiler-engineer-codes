@@ -1,4 +1,5 @@
 %{
+//部分代码引用：Andrew W.Appel. 现代编译原理C语言描述[M]. 北京:人民邮电出版社,2006:20-21
 int row_num = 1, col_num = 1;
 #define ADJ  (col_num+=yyleng)
 %}
