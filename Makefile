@@ -7,5 +7,6 @@ build:
 	gcc -o parsing parsing.tab.c lex.yy.c -lfl
 check:
 	./lexical < test/testcase.pl0
-	./parsing < test/testcase.pl0
+	./parsing < test/test
+	dot -Tpdf graph.txt -o test1_pdf.pdf
 .PHONY:default build check
