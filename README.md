@@ -1,15 +1,21 @@
 # becoming-a-compiler-engineer-codes
-方舟编译入门技术课程的配套代码
+方舟编译入门技术课程的课后作业
+<br>使用教程：
+<br>首先clone 本仓库代码；
+```
+$ git clone https://github.com/lazyparser/becoming-a-compiler-engineer-codes.git
+```
+<br>然后切换到chenjiayou分支
+```
+$ git checkout chenjiayou
+```
 
-如何使用本仓库？
+#### 致谢：
 
-```bash
-git clone xxx
-# 可以看到很多不同助教独立的代码提交
-git branch -av
-# 切入某一个助教的代码，开始查看，例如
-git checkout sunyueying
-# 或者开始你自己的代码
-git checkout -b your-name-or-feature
-# Let's Hack!
-···
+本分支的部分文档和代码引用或参考了以下资料，感谢你们专业的总结。
+
+https://blog.csdn.net/weixin_34365635/article/details/90157480
+
+http://pandolia.net/tinyc
+
+......(随着本分支内容的更新，持续更新)
